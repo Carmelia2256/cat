@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!--[if lt IE 8]><html class="no-js ie ltie8 ltie9 ltie10" lang="ru"><![endif]-->
-<!--[if IE 8]><html class="no-js ie ie8 ltie9 ltie10" lang="ru"><![endif]-->
-<!--[if IE 9]><html class="no-js ie gtie8 ie9 ltie10" lang="ru"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--><![endif]-->
+<html lang="ru">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-	<!-- <link rel="stylesheet" href="css/reset.css"> -->
-
-	<!-- нормализация дефолтных стилей браузеров -->
-	<link rel="stylesheet" href="css/normalize.css">
-
-	<!-- основные стили -->
-	<link rel="stylesheet" href="css/main.css">
-
-	<script src="js/jquery-1.11.3.min.js"></script>
-
-	<!-- проверка поддержки свойств в разных браузерах -->
-	<script src="js/modernizr.custom.js"></script>
-
-	<!-- поддержка html5-тегов, css3-селекторов, медиа-запросов в IE<=8 -->
-	<!--[if lt IE 9]>
-		<script src="js/html5shiv.min.js"></script>
-		<script src="js/respond.min.js"></script>
-		<script src="js/nwmatcher-1.2.5.js"></script>
-		<script src="js/selectivizr-min.js"></script>
-	<![endif]-->
-
-	<!-- основные скрипты -->
-	<script src="js/scripts.js"></script>
-
-	<meta name="description" content="Your description">
-  	<meta name="author" content="Author Name">
-	<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример веб-страницы</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="page"></div>
+    <header>
+        <h1>Добро пожаловать на наш сайт!</h1>
+        <p>Это пример простой веб-страницы с текстом, изображениями и формой ввода.</p>
+    </header>
+
+    <section class="content">
+        <h2>Наши продукты</h2>
+        <img src="product.jpg" alt="Изображение продукта" class="product-image">
+        <p>Описание наших замечательных продуктов, которые можно заказать прямо сейчас!</p>
+    </section>
+
+    <section class="form-section">
+        <h2>Форма обратной связи</h2>
+        <form id="feedbackForm">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Отправить</button>
+            <p id="error-message" class="error"></p>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
