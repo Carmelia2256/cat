@@ -1,19 +1,21 @@
-// пространство имен для рабты элементов страниц
-var UI = window.UI || {};
+document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    let errorMessage = "";
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-// пространство имен для функций, которые будут вызваны при загрузке DOM
-UI.commonFuncs = UI.commonFuncs || {};
+    if (name.length < 3) {
+        errorMessage += "Имя должно содержать не менее 3 символов. ";
+    }
+    if (!email.includes("@") || !email.includes(".")) {
+        errorMessage += "Введите корректный адрес электронной почты. ";
+    }
+    if (message.length < 10) {
+        errorMessage += "Сообщение должно содержать не менее 10 символов.";
+    }
 
-
-// события при загрузке DOM
-document.addEventListener('DOMContentLoaded', function () {
-
-	// перебираем все функции из объекта commonFuncs и вызываем их
-	var funcs = UI.commonFuncs;
-	for (var func in funcs) {
-		if(funcs.hasOwnProperty(func) && typeof funcs[func] === 'function') {
-			funcs[func]();
-		}
-	};
-
+    if (errorMessage) {
+        document.getElementById("error-message").textContent = errorMessage;
+        event.preventDefault();
+    }
 });
